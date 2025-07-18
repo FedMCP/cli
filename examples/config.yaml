@@ -1,0 +1,21 @@
+# FedMCP CLI Configuration Example
+default_server: https://fedmcp.agency.gov
+default_workspace: development
+
+workspaces:
+  development:
+    name: development
+    server: https://dev.fedmcp.agency.gov
+    key_file: ~/.fedmcp/keys/dev-signing.key
+    
+  staging:
+    name: staging  
+    server: https://staging.fedmcp.agency.gov
+    kms_key_id: arn:aws:kms:us-gov-west-1:123456789:key/staging-key
+    
+  production:
+    name: production
+    server: https://fedmcp.agency.gov
+    kms_key_id: arn:aws:kms:us-gov-west-1:123456789:key/prod-key
+
+keys_directory: ~/.fedmcp/keys
